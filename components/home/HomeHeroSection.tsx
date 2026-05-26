@@ -162,6 +162,29 @@ export default function HomeHeroSection() {
                       {section.secondaryCta}
                     </a>
                   </div>
+                  <div className="mt-5 w-full max-w-[360px] rounded-[18px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_14px_36px_rgba(0,0,0,0.18)] backdrop-blur">
+                    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/48">
+                      For partnership contact
+                    </p>
+                    <div className="grid grid-cols-2 gap-2">
+                      <a
+                        href={marketContactLinks.telegram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-h-[42px] items-center justify-center rounded-[14px] border border-white/10 bg-white/[0.06] px-4 text-[14px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.09]"
+                      >
+                        {t.footer.telegram}
+                      </a>
+                      <a
+                        href={marketContactLinks.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-h-[42px] items-center justify-center rounded-[14px] border border-white/10 bg-white/[0.06] px-4 text-[14px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.09]"
+                      >
+                        {t.footer.whatsapp}
+                      </a>
+                    </div>
+                  </div>
 
                   <div className="home-hero-actionshell__meta">
                     <span className="home-hero-live">

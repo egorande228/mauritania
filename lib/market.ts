@@ -20,7 +20,7 @@ export const marketRoutes = {
 
 export const marketContactLinks = {
   telegram: "https://t.me/MRPartner",
-  whatsapp: "https://wa.me/22200000000",
+  whatsapp: "mailto:PAYPARTNERS-NORTHAFRICA@MELBET.COM",
 } as const;
 
 export const marketMetadata: Metadata = {

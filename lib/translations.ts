@@ -146,7 +146,7 @@ const partnershipContent = {
       title: "Pick your route and go live fast",
       text: "If you want to run local cashier operations, join as an agent. If you want to attract players worldwide, join as a partner and choose the deal model that fits.",
       telegramCta: "Join on Telegram",
-      whatsappCta: "Join on WhatsApp",
+      whatsappCta: "Send mail",
       ticker: [
         "Agents run city cashier operations",
         "Partners attract players worldwide",
@@ -301,7 +301,7 @@ const partnershipContent = {
       title: "اختر مسارك وابدأ بسرعة",
       text: "إذا كنت تريد تشغيل الكاشير المحلي فانضم كوكيل، وإذا كنت تريد جذب اللاعبين عالمياً فانضم كشريك واختر نموذج الصفقة الأنسب لك.",
       telegramCta: "انضم عبر تيليغرام",
-      whatsappCta: "انضم عبر واتساب",
+      whatsappCta: "أرسل بريداً",
       ticker: [
         "الوكلاء يديرون الكاشير داخل المدن",
         "الشركاء يجذبون اللاعبين عالمياً",
@@ -456,7 +456,7 @@ const partnershipContent = {
       title: "Choisissez votre route et activez-la vite",
       text: "Si vous voulez opérer la caisse locale, rejoignez-nous comme agent. Si vous voulez attirer des joueurs dans le monde entier, rejoignez-nous comme partenaire et choisissez le deal adapté.",
       telegramCta: "Rejoindre sur Telegram",
-      whatsappCta: "Rejoindre sur WhatsApp",
+      whatsappCta: "Envoyer un mail",
       ticker: [
         "Les agents gèrent la caisse de ville",
         "Les partenaires attirent des joueurs mondialement",
@@ -631,11 +631,11 @@ const translations = {
       text: "Empowering Mauritanians through financial partnership and shared growth.",
       navigation: "Navigation",
       contact: "Contact",
-      network: "Join our network via Telegram or WhatsApp to get started.",
+      network: "Join our network via Telegram or email to get started.",
       faqCta: "View FAQ",
       rights: "© 2026 MR Partner. All rights reserved.",
       telegram: "Telegram",
-      whatsapp: "WhatsApp",
+      whatsapp: "Mail",
       links: {
         home: "Home",
         partnership: "Partnership",
@@ -808,7 +808,7 @@ const translations = {
       faqCta: "عرض الأسئلة الشائعة",
       rights: "© 2026 شريك MR. جميع الحقوق محفوظة.",
       telegram: "تيليغرام",
-      whatsapp: "واتساب",
+      whatsapp: "البريد",
       links: {
         home: "الرئيسية",
         partnership: "الشراكة",
@@ -977,11 +977,11 @@ const translations = {
       text: "Permettre aux Mauritaniens de prospérer grâce au partenariat financier.",
       navigation: "Navigation",
       contact: "Contact",
-      network: "Rejoignez notre réseau via Telegram ou WhatsApp pour commencer.",
+      network: "Rejoignez notre réseau via Telegram ou email pour commencer.",
       faqCta: "Voir la FAQ",
       rights: "© 2026 MR Partner. Tous droits réservés.",
       telegram: "Telegram",
-      whatsapp: "WhatsApp",
+      whatsapp: "Mail",
       links: {
         home: "Accueil",
         partnership: "Partenariat",

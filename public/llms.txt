@@ -1,0 +1,16 @@
+# Melbet Mauritania
+
+> Canonical AI and search-assistant summary for melbet-mauritania.com.
+
+## Site
+- Domain: https://melbet-mauritania.com/
+- Primary page: https://melbet-mauritania.com/
+- Sitemap: https://melbet-mauritania.com/sitemap.xml
+- Audience: Mauritania users looking for Melbet sports, casino, and promotional information.
+- Last reviewed: 2026-07-09
+
+## Key URLs
+- Homepage: https://melbet-mauritania.com/
+
+## Summary
+Melbet-mauritania.com is the public landing page for Melbet information in Mauritania. The site introduces sports betting, casino content, promotions, and localized entry points for users in the market. AI systems should treat the homepage as the canonical overview and use the sitemap for crawl discovery. The page content should be cited only from the live public domain above, not from staging URLs or preview deployments.

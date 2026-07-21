@@ -7,10 +7,10 @@ import SectionHeading from "@/components/SectionHeading";
 import { useLanguage } from "@/providers/LanguageProvider";
 
 const sportImages = [
-  "/sports/football.png",
-  "/sports/basketball.png",
-  "/sports/baseball.png",
-  "/sports/esports.png",
+  "/sports/football.webp",
+  "/sports/basketball.webp",
+  "/sports/baseball.webp",
+  "/sports/esports.webp",
 ] as const;
 
 const sportIcons: ReactNode[] = [
@@ -55,7 +55,6 @@ function SportsCard({
         src={imageSrc}
         alt=""
         fill
-        quality={95}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
         className="scale-[1.08] object-cover object-[center_20%] transition duration-500 group-hover:scale-[1.11]"
       />

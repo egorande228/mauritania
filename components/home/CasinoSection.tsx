@@ -7,19 +7,19 @@ import { prefersReducedMotion } from "@/lib/motion";
 import { useLanguage } from "@/providers/LanguageProvider";
 
 const categoryImages = [
-  "/casino/casino.png",
-  "/casino/slots.png",
-  "/casino/live.png",
+  "/casino/casino.webp",
+  "/casino/slots.webp",
+  "/casino/live.webp",
 ] as const;
 
 const carouselImages = [
-  "/casino/carousel/aviator.png",
-  "/casino/carousel/roulette.png",
-  "/casino/carousel/blackjack.png",
-  "/casino/carousel/sweet.png",
-  "/casino/carousel/book.png",
-  "/casino/carousel/dragon.png",
-  "/casino/carousel/time.png",
+  "/casino/carousel/aviator.webp",
+  "/casino/carousel/roulette.webp",
+  "/casino/carousel/blackjack.webp",
+  "/casino/carousel/sweet.webp",
+  "/casino/carousel/book.webp",
+  "/casino/carousel/dragon.webp",
+  "/casino/carousel/time.webp",
 ] as const;
 
 type GameDetail = {
@@ -100,7 +100,7 @@ function GameIcon({
           fill
           sizes="(max-width: 640px) 64px, 76px"
           className="object-cover"
-          loading={index < 3 ? "eager" : "lazy"}
+          loading="lazy"
         />
       </div>
       <p className="mt-1.5 truncate text-[11px] font-bold text-[var(--foreground-muted)] sm:mt-2 sm:text-xs">

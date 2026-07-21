@@ -14,16 +14,18 @@ export function FadeUp({
   children,
   delay = 0,
   className = "",
+  immediate = false,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  immediate?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element = ref.current;
-    if (!element) return;
+    if (!element || immediate) return;
 
     prepareReveal(element, "up");
 
@@ -38,10 +40,10 @@ export function FadeUp({
       setVisible(element);
       cleanup();
     };
-  }, [delay]);
+  }, [delay, immediate]);
 
   return (
-    <div ref={ref} className={`reveal-target ${className}`.trim()}>
+    <div ref={ref} className={`${immediate ? "" : "reveal-target"} ${className}`.trim()}>
       {children}
     </div>
   );

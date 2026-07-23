@@ -2,7 +2,7 @@
 
 Public canonical pages currently exposed by this site:
 
-- Homepage: https://melbet-mauritania.com/
-- Partnership: https://melbet-mauritania.com/partnership
+- Homepage: https://www.melbet-mauritania.com/
+- Partnership: https://www.melbet-mauritania.com/partnership
 
 Use the canonical URLs above when citing or summarizing this website.

@@ -10,7 +10,7 @@ function HeroVisual() {
   const channels = [t.home.sports.eyebrow, t.home.casino.eyebrow, t.home.promos.eyebrow];
 
   return (
-    <FadeUp delay={180} className="h-full">
+    <FadeUp immediate className="h-full">
       <div className="home-hero-board">
         <div className="home-hero-board__top">
           <span className="home-hero-live">
@@ -108,14 +108,14 @@ export default function HomeHeroSection() {
 
           <div className="home-hero-stage__grid">
             <div className="home-hero-copy">
-              <FadeUp>
+              <FadeUp immediate>
                 <div className="eyebrow-divider lp-eyebrow justify-start text-[var(--primary)]">
                   <span className="eyebrow-divider__line" />
                   {section.eyebrow}
                 </div>
               </FadeUp>
 
-              <FadeUp delay={80}>
+              <FadeUp immediate>
                 <h1 className="lp-hero-title mt-5 text-[var(--foreground)] sm:mt-6">
                   {section.title.before}
                   <br className="hidden sm:block" />
@@ -123,13 +123,13 @@ export default function HomeHeroSection() {
                 </h1>
               </FadeUp>
 
-              <FadeUp delay={140}>
+              <FadeUp immediate>
                 <p className="lp-body mt-5 max-w-[40rem] text-[var(--foreground-muted)] sm:mt-6">
                   {section.text}
                 </p>
               </FadeUp>
 
-              <FadeUp delay={190}>
+              <FadeUp immediate>
                 <div className="home-hero-kpis mt-6 sm:mt-7">
                   {heroStats.map((stat, index) => (
                     <div key={stat.label} className="home-hero-kpi">
@@ -147,7 +147,7 @@ export default function HomeHeroSection() {
                 </div>
               </FadeUp>
 
-              <FadeUp delay={240}>
+              <FadeUp immediate>
                 <div className="home-hero-actionshell mt-8 sm:mt-9">
                   <div className="grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
                     <a

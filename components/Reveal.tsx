@@ -27,6 +27,11 @@ export function FadeUp({
     const element = ref.current;
     if (!element || immediate) return;
 
+    if (immediate) {
+      setVisible(element);
+      return;
+    }
+
     prepareReveal(element, "up");
 
     let animation: ReturnType<typeof revealUp> = null;

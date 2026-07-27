@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
@@ -17,6 +18,18 @@ export default function RootLayout({
       className="h-full antialiased"
     >
       <body className="page-shell min-h-full">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EEMV2L4H74"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-G-EEMV2L4H74" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function(){window.dataLayer.push(arguments);}
+            window.gtag('js', new Date());
+            window.gtag('config', 'G-EEMV2L4H74');
+          `}
+        </Script>
         <LanguageProvider>
           <InteractiveBackground />
           <div className="page-content">

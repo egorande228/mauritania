@@ -27,7 +27,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             window.gtag = window.gtag || function(){window.dataLayer.push(arguments);}
             window.gtag('js', new Date());
-            window.gtag('config', 'G-EEMV2L4H74');
+            window.gtag('config', 'G-EEMV2L4H74'); // Dedicated GA4 stream.
           `}
         </Script>
         <LanguageProvider>

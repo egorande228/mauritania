@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { FadeUp } from "@/components/Reveal";
+import { marketRoutes } from "@/lib/market";
 import { prefersReducedMotion } from "@/lib/motion";
 import { useLanguage } from "@/providers/LanguageProvider";
 
@@ -35,10 +36,11 @@ function CategoryMedia({ index, title }: { index: number; title: string }) {
     <div className="relative h-full min-h-[clamp(18rem,78vw,23.75rem)] overflow-hidden rounded-[26px] border border-[var(--border)] bg-black/20 sm:rounded-[28px]">
       <Image
         src={src}
-        alt={`${title} visual`}
-        fill
+        alt={`${title} category preview`}
+        width={800}
+        height={600}
         sizes="(max-width: 1024px) 100vw, 420px"
-        className="object-cover"
+        className="h-full w-full object-cover"
       />
       <span
         aria-hidden
@@ -96,10 +98,11 @@ function GameIcon({
       <div className="relative mx-auto h-[64px] w-[64px] overflow-hidden rounded-[18px] border border-[var(--border)] bg-[rgba(255,255,255,0.035)] shadow-[0_16px_36px_rgba(0,0,0,0.18)] sm:h-[76px] sm:w-[76px] sm:rounded-[22px]">
         <Image
           src={imageSrc}
-          alt={decorative ? "" : `${name} icon`}
-          fill
+          alt=""
+          width={800}
+          height={800}
           sizes="(max-width: 640px) 64px, 76px"
-          className="object-cover"
+          className="h-full w-full object-cover"
           loading="lazy"
         />
       </div>
@@ -180,10 +183,11 @@ function GameShowcase({
         <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-[20px] border border-[var(--border-strong)] bg-black/20 shadow-[0_18px_42px_rgba(0,0,0,0.24)] sm:h-20 sm:w-20 sm:rounded-[24px]">
           <Image
             src={imageSrc}
-            alt={`${name} icon`}
-            fill
+            alt={`${name} game preview`}
+            width={800}
+            height={800}
             sizes="(max-width: 640px) 64px, 80px"
-            className="object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
 
@@ -227,7 +231,7 @@ function GameShowcase({
         </div>
       </div>
 
-      <a href="" className="button-primary lp-button mt-8 self-start sm:mt-9">
+      <a href={marketRoutes.homePromos} className="button-primary lp-button mt-8 self-start sm:mt-9">
         {playNowLabel}
       </a>
     </div>

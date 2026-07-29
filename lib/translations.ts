@@ -624,6 +624,66 @@ const translations = {
           },
         ],
       },
+      guide: {
+        eyebrow: "Homepage guide",
+        title: "What Melbet Mauritania covers on one page",
+        text: "A fuller overview of the sections, routes, and language options currently published on the site.",
+        answerBlock:
+          "Melbet Mauritania is the main homepage hub for this website in Mauritania. The page brings sports markets, casino categories, featured games, and weekly promotional highlights into one route so visitors can understand the current offer without jumping between unrelated pages. From this screen, users can move through football, basketball, baseball, and esports highlights, compare casino, slots, and live-game categories, and review bonus-oriented content built around welcome offers and weekly gifts. The interface also supports English, Arabic, and French, which helps local visitors and French-language searches such as Melbet Mauritanie reach the same branded destination. For users interested in business access rather than player content, the site also publishes a separate partnership page with agent and partner pathways.",
+        quickLinksLabel: "Explore the published sections",
+        links: {
+          sports: "Sports",
+          casino: "Casino",
+          promos: "Promos",
+          partnership: "Partnership",
+        },
+        cards: [
+          {
+            title: "Sports focus",
+            text: "Football, basketball, baseball, and esports are the sports sections currently highlighted on the homepage.",
+          },
+          {
+            title: "Casino overview",
+            text: "The casino area groups casino, slots, and live games, then showcases named titles already present in the interface.",
+          },
+          {
+            title: "Promo snapshot",
+            text: "Promotions are presented as welcome and weekly gift content so visitors can review the current reward themes quickly.",
+          },
+        ],
+      },
+      faq: {
+        eyebrow: "Common questions",
+        title: "Quick answers for visitors and crawlers",
+        text: "Short, page-supported answers about the sections, languages, and routes currently available on the site.",
+        items: [
+          {
+            question: "What can you find on the Melbet Mauritania homepage?",
+            answer:
+              "The homepage brings together sports highlights, casino categories, featured games, and promo-led content so visitors can review the main areas of the site from one route.",
+          },
+          {
+            question: "Does the site support French and Arabic visitors?",
+            answer:
+              "Yes. The interface includes English, Arabic, and French, which helps Mauritania-based users and visitors searching for Melbet Mauritanie switch language without leaving the homepage.",
+          },
+          {
+            question: "What does the partnership page cover?",
+            answer:
+              "The partnership route focuses on agent cashier flows, partner acquisition models, and contact paths for people who want the business side of the site rather than the player hub.",
+          },
+        ],
+      },
+      editorial: {
+        eyebrow: "Page source",
+        title: "Publisher and scope",
+        text: "Publisher: MR Partner. This homepage summarizes the sports, casino, promotions, and partnership routes currently published in this repository for the Melbet Mauritania website.",
+        items: [
+          { label: "Publisher", value: "MR Partner" },
+          { label: "Market", value: "Mauritania" },
+          { label: "Languages", value: "English, Arabic, French" },
+        ],
+      },
     },
     ...partnershipContent.en,
     footer: {
@@ -797,6 +857,66 @@ const translations = {
           },
         ],
       },
+      guide: {
+        eyebrow: "دليل الصفحة الرئيسية",
+        title: "ماذا تغطي صفحة Melbet Mauritania في صفحة واحدة",
+        text: "نظرة أوسع على الأقسام والروابط وخيارات اللغة المنشورة حالياً على الموقع.",
+        answerBlock:
+          "تُعد Melbet Mauritania بوابة الصفحة الرئيسية الأساسية لهذا الموقع داخل موريتانيا. تجمع الصفحة أسواق الرياضة، وفئات الكازينو، والألعاب المميزة، وأبرز العروض الأسبوعية في مسار واحد حتى يفهم الزائر المحتوى الحالي دون التنقل بين صفحات غير مترابطة. من هذه الشاشة يمكن متابعة إبرازات كرة القدم وكرة السلة والبيسبول والرياضات الإلكترونية، ومقارنة أقسام الكازينو والسلوتس والألعاب المباشرة، ومراجعة المحتوى المرتبط بالمكافآت الترحيبية والهدايا الأسبوعية. كما تدعم الواجهة الإنجليزية والعربية والفرنسية، ما يساعد الزوار المحليين والباحثين بالفرنسية عن Melbet Mauritanie على الوصول إلى الوجهة نفسها. ولمن يهتم بالوصول التجاري بدلاً من محتوى اللاعبين، ينشر الموقع أيضاً صفحة شراكة منفصلة بمسارات للوكلاء والشركاء.",
+        quickLinksLabel: "استكشف الأقسام المنشورة",
+        links: {
+          sports: "الرياضة",
+          casino: "الكازينو",
+          promos: "العروض",
+          partnership: "الشراكة",
+        },
+        cards: [
+          {
+            title: "تركيز الرياضة",
+            text: "تظهر كرة القدم وكرة السلة والبيسبول والرياضات الإلكترونية كأقسام الرياضة الأساسية على الصفحة الرئيسية.",
+          },
+          {
+            title: "نظرة الكازينو",
+            text: "يجمع قسم الكازينو بين الكازينو والسلوتس والألعاب المباشرة ثم يعرض الألعاب المذكورة داخل الواجهة نفسها.",
+          },
+          {
+            title: "ملخص العروض",
+            text: "تُعرض العروض بصيغة ترحيبية وأسبوعية حتى يراجع الزائر محاور المكافآت الحالية بسرعة.",
+          },
+        ],
+      },
+      faq: {
+        eyebrow: "أسئلة شائعة",
+        title: "إجابات سريعة للزوار ومحركات الفهم",
+        text: "إجابات قصيرة ومدعومة بالصفحة حول الأقسام واللغات والمسارات المتاحة حالياً على الموقع.",
+        items: [
+          {
+            question: "ماذا يمكن أن تجد في الصفحة الرئيسية لـ Melbet Mauritania؟",
+            answer:
+              "تجمع الصفحة الرئيسية أبرز الرياضات وفئات الكازينو والألعاب المميزة والمحتوى الترويجي حتى يراجع الزائر المسارات الأساسية للموقع من صفحة واحدة.",
+          },
+          {
+            question: "هل يدعم الموقع الزوار بالفرنسية والعربية؟",
+            answer:
+              "نعم. تتضمن الواجهة الإنجليزية والعربية والفرنسية، ما يساعد مستخدمي موريتانيا والباحثين عن Melbet Mauritanie على تبديل اللغة من الصفحة نفسها.",
+          },
+          {
+            question: "ماذا تغطي صفحة الشراكة؟",
+            answer:
+              "تركز صفحة الشراكة على مسارات الوكلاء، ونماذج عمل الشركاء، ووسائل التواصل للأشخاص الذين يريدون الجانب التجاري من الموقع بدلاً من بوابة اللاعبين.",
+          },
+        ],
+      },
+      editorial: {
+        eyebrow: "مصدر الصفحة",
+        title: "الناشر ونطاق الصفحة",
+        text: "الناشر: MR Partner. تلخص هذه الصفحة الرئيسية مسارات الرياضة والكازينو والعروض والشراكة المنشورة حالياً في هذا المستودع لموقع Melbet Mauritania.",
+        items: [
+          { label: "الناشر", value: "MR Partner" },
+          { label: "السوق", value: "موريتانيا" },
+          { label: "اللغات", value: "الإنجليزية، العربية، الفرنسية" },
+        ],
+      },
     },
     ...partnershipContent.ar,
     footer: {
@@ -968,6 +1088,66 @@ const translations = {
             text: "Des extras simples chaque semaine pour les joueurs qui suivent l'action.",
             items: ["Compétitions hebdomadaires pour gagner des free bets", "300 tours gratuits"],
           },
+        ],
+      },
+      guide: {
+        eyebrow: "Guide de la page d'accueil",
+        title: "Ce que Melbet Mauritania regroupe sur une seule page",
+        text: "Un aperçu plus complet des sections, routes et options de langue actuellement publiées sur le site.",
+        answerBlock:
+          "Melbet Mauritania est le hub principal de cette page d'accueil pour le site en Mauritanie. La page rassemble les marchés sportifs, les catégories casino, les jeux mis en avant et les points forts promotionnels hebdomadaires sur une seule route afin que le visiteur comprenne l'offre actuelle sans passer entre des pages sans lien direct. Depuis cet écran, l'utilisateur peut parcourir les temps forts football, basketball, baseball et esport, comparer les catégories casino, slots et jeux live, puis revoir le contenu bonus construit autour des offres de bienvenue et des cadeaux hebdomadaires. L'interface fonctionne aussi en anglais, en arabe et en français, ce qui aide les visiteurs locaux et les recherches de marque comme Melbet Mauritanie à atteindre la même destination. Pour les utilisateurs qui cherchent un accès business plutôt qu'un contenu joueur, le site publie aussi une page de partenariat séparée avec des parcours agent et partenaire.",
+        quickLinksLabel: "Explorer les sections publiées",
+        links: {
+          sports: "Sports",
+          casino: "Casino",
+          promos: "Promos",
+          partnership: "Partenariat",
+        },
+        cards: [
+          {
+            title: "Focus sports",
+            text: "Football, basketball, baseball et esport sont les sections sportives actuellement mises en avant sur la page d'accueil.",
+          },
+          {
+            title: "Vue casino",
+            text: "La zone casino regroupe casino, slots et jeux live, puis met en avant les titres déjà présents dans l'interface.",
+          },
+          {
+            title: "Aperçu promos",
+            text: "Les promotions sont présentées autour de l'accueil et des cadeaux hebdo pour revoir rapidement les thèmes de récompense actuels.",
+          },
+        ],
+      },
+      faq: {
+        eyebrow: "Questions fréquentes",
+        title: "Réponses rapides pour visiteurs et moteurs",
+        text: "Des réponses courtes, appuyées par la page, sur les sections, les langues et les routes disponibles sur le site.",
+        items: [
+          {
+            question: "Que trouve-t-on sur la page d'accueil Melbet Mauritania ?",
+            answer:
+              "La page d'accueil rassemble les points forts sports, les catégories casino, les jeux mis en avant et le contenu promo afin de revoir les zones principales du site depuis une seule route.",
+          },
+          {
+            question: "Le site aide-t-il les visiteurs en français et en arabe ?",
+            answer:
+              "Oui. L'interface propose l'anglais, l'arabe et le français, ce qui aide les utilisateurs en Mauritanie et les recherches Melbet Mauritanie à changer de langue sans quitter la page d'accueil.",
+          },
+          {
+            question: "Que couvre la page partenariat ?",
+            answer:
+              "La route partenariat se concentre sur les flux agent, les modèles pour partenaires et les chemins de contact pour les personnes qui cherchent la partie business du site plutôt que le hub joueur.",
+          },
+        ],
+      },
+      editorial: {
+        eyebrow: "Source de page",
+        title: "Éditeur et périmètre",
+        text: "Éditeur : MR Partner. Cette page d'accueil résume les routes sports, casino, promotions et partenariat actuellement publiées dans ce dépôt pour le site Melbet Mauritania.",
+        items: [
+          { label: "Éditeur", value: "MR Partner" },
+          { label: "Marché", value: "Mauritanie" },
+          { label: "Langues", value: "Anglais, arabe, français" },
         ],
       },
     },

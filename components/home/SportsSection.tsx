@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import { FadeUp, StaggerReveal } from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
+import { marketRoutes } from "@/lib/market";
 import { useLanguage } from "@/providers/LanguageProvider";
 
 const sportImages = [
@@ -51,13 +52,16 @@ function SportsCard({
 }) {
   return (
     <article className="group relative flex min-h-[clamp(18rem,78vw,22.5rem)] overflow-hidden rounded-[28px] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-card)] transition duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[0_28px_70px_rgba(0,0,0,0.28)] sm:p-6">
-      <Image
-        src={imageSrc}
-        alt=""
-        fill
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
-        className="scale-[1.08] object-cover object-[center_20%] transition duration-500 group-hover:scale-[1.11]"
-      />
+      <div className="absolute inset-0">
+        <Image
+          src={imageSrc}
+          alt={`${title} section illustration`}
+          width={800}
+          height={1000}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+          className="h-full w-full scale-[1.08] object-cover object-[center_20%] transition duration-500 group-hover:scale-[1.11]"
+        />
+      </div>
       <span
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,11,8,0.06)_0%,rgba(5,8,6,0.24)_46%,rgba(5,8,6,0.88)_100%),radial-gradient(circle_at_50%_0%,rgba(212,168,79,0.08),transparent_42%)]"
@@ -75,7 +79,7 @@ function SportsCard({
 
         <div>
           <p className="lp-body-sm mt-3 text-[var(--foreground-muted)]">{text}</p>
-          <a href="" className="button-secondary lp-button mt-5 sm:mt-6">
+          <a href={marketRoutes.homePromos} className="button-secondary lp-button mt-5 sm:mt-6">
             {cta}
           </a>
         </div>

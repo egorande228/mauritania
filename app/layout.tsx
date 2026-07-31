@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
 import InteractiveBackground from "@/components/InteractiveBackground";
-import { marketMetadata } from "@/lib/market";
+import { siteMetadata } from "@/lib/market";
 import { LanguageProvider } from "@/providers/LanguageProvider";
 
-export const metadata: Metadata = marketMetadata;
+export const metadata: Metadata = siteMetadata;
 
 export default function RootLayout({
   children,
@@ -20,9 +20,9 @@ export default function RootLayout({
       <body className="page-shell min-h-full">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-EEMV2L4H74"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics-G-EEMV2L4H74" strategy="afterInteractive">
+        <Script id="google-analytics-G-EEMV2L4H74" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             window.gtag = window.gtag || function(){window.dataLayer.push(arguments);}

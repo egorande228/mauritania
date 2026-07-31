@@ -1,17 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import {
-  observeOnce,
-  pauseAnimation,
-  prepareReveal,
-  revealScale,
-  setVisible,
-  stopAnimation,
-} from "@/lib/motion";
 import { marketRoutes } from "@/lib/market";
 import { useLanguage } from "@/providers/LanguageProvider";
 
@@ -32,69 +24,24 @@ function NavItem({
 }
 
 function BrandMark() {
-  const [logoLoaded, setLogoLoaded] = useState(true);
-
   return (
     <span className="brand-lockup__logo">
-      {logoLoaded ? (
-        <Image
-          src="/logo.svg"
-          alt="Melbet"
-          width={160}
-          height={28}
-          priority
-          unoptimized
-          className="brand-lockup__image"
-          onError={() => setLogoLoaded(false)}
-        />
-      ) : (
-        <span className="brand-lockup__fallback">Melbet</span>
-      )}
+      <Image
+        src="/logo.svg"
+        alt="Melbet Mauritania logo"
+        width={160}
+        height={28}
+        priority
+        unoptimized
+        className="brand-lockup__image"
+      />
     </span>
   );
 }
 
 export default function TopBar() {
   const { t, isArabic } = useLanguage();
-  const barRef = useRef<HTMLDivElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const element = barRef.current;
-    if (!element) return;
-
-    prepareReveal(element, "scale");
-
-    let animation: ReturnType<typeof revealScale> = null;
-    const cleanup = observeOnce(
-      element,
-      () => {
-        animation = revealScale(element);
-      },
-      { threshold: 0.1 },
-    );
-
-    return () => {
-      pauseAnimation(animation);
-      stopAnimation(element);
-      setVisible(element);
-      cleanup();
-    };
-  }, []);
-
-  useEffect(() => {
-    const closeMenu = () => {
-      setMenuOpen(false);
-    };
-
-    window.addEventListener("hashchange", closeMenu);
-    window.addEventListener("resize", closeMenu);
-
-    return () => {
-      window.removeEventListener("hashchange", closeMenu);
-      window.removeEventListener("resize", closeMenu);
-    };
-  }, []);
 
   return (
     <header
@@ -102,7 +49,7 @@ export default function TopBar() {
       dir={isArabic ? "rtl" : "ltr"}
     >
       <div className="container-main">
-        <div ref={barRef} className="header-shell">
+        <div className="header-shell">
           <span aria-hidden className="header-shell__glow" />
           <span aria-hidden className="panel-top-line" />
 

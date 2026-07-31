@@ -98,7 +98,7 @@ function GameIcon({
       <div className="relative mx-auto h-[64px] w-[64px] overflow-hidden rounded-[18px] border border-[var(--border)] bg-[rgba(255,255,255,0.035)] shadow-[0_16px_36px_rgba(0,0,0,0.18)] sm:h-[76px] sm:w-[76px] sm:rounded-[22px]">
         <Image
           src={imageSrc}
-          alt=""
+          alt={decorative ? "" : `${name} game thumbnail`}
           width={800}
           height={800}
           sizes="(max-width: 640px) 64px, 76px"
@@ -110,43 +110,6 @@ function GameIcon({
         {name}
       </p>
     </button>
-  );
-}
-
-function GameSet({
-  games,
-  setIndex,
-  setRef,
-  activeIndex,
-  onGameHover,
-  onGameLeave,
-}: {
-  games: readonly string[];
-  setIndex: number;
-  setRef?: React.RefObject<HTMLDivElement | null>;
-  activeIndex: number | null;
-  onGameHover: (index: number) => void;
-  onGameLeave: () => void;
-}) {
-  return (
-    <div
-      ref={setRef}
-      aria-hidden={setIndex > 0}
-      className="flex shrink-0 gap-2.5 pr-2.5 sm:gap-3 sm:pr-3"
-    >
-      {games.map((game, index) => (
-        <GameIcon
-          key={`${game}-${setIndex}`}
-          name={game}
-          index={index}
-          imageSrc={carouselImages[index] ?? carouselImages[0]}
-          decorative={setIndex > 0}
-          activeIndex={activeIndex}
-          onHover={onGameHover}
-          onLeave={onGameLeave}
-        />
-      ))}
-    </div>
   );
 }
 
@@ -243,10 +206,6 @@ export default function CasinoSection() {
   const section = t.home.casino;
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoveredGameIndex, setHoveredGameIndex] = useState<number | null>(null);
-  const [isCarouselPaused, setIsCarouselPaused] = useState(false);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const firstGameSetRef = useRef<HTMLDivElement>(null);
-  const pauseRef = useRef(false);
   const hideShowcaseTimerRef = useRef<number | null>(null);
   const hoveredGameName =
     hoveredGameIndex === null ? null : (section.games[hoveredGameIndex] ?? null);
@@ -254,10 +213,6 @@ export default function CasinoSection() {
     hoveredGameIndex === null
       ? null
       : (section.gameDetails[hoveredGameIndex] ?? section.gameDetails[0]);
-
-  useEffect(() => {
-    pauseRef.current = isCarouselPaused;
-  }, [isCarouselPaused]);
 
   useEffect(() => {
     return () => {
@@ -276,21 +231,16 @@ export default function CasinoSection() {
   const showGameShowcase = (index: number) => {
     clearShowcaseTimer();
     setHoveredGameIndex(index);
-    setIsCarouselPaused(true);
   };
 
   const holdGameShowcase = () => {
     clearShowcaseTimer();
-    if (hoveredGameIndex !== null) {
-      setIsCarouselPaused(true);
-    }
   };
 
   const scheduleHideGameShowcase = () => {
     clearShowcaseTimer();
     hideShowcaseTimerRef.current = window.setTimeout(() => {
       setHoveredGameIndex(null);
-      setIsCarouselPaused(false);
       hideShowcaseTimerRef.current = null;
     }, 140);
   };
@@ -304,57 +254,6 @@ export default function CasinoSection() {
 
     return () => window.clearInterval(interval);
   }, [section.categories.length]);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    const firstSet = firstGameSetRef.current;
-    if (!track || !firstSet) return;
-
-    let animationFrame = 0;
-    let distance = firstSet.offsetWidth;
-    let lastTime = performance.now();
-    let position = 0;
-    const speed = 38;
-
-    const measure = () => {
-      distance = firstSet.offsetWidth;
-      if (distance > 0) {
-        position %= distance;
-      }
-    };
-
-    const tick = (time: number) => {
-      if (distance <= 0) {
-        measure();
-      }
-
-      const delta = Math.min(time - lastTime, 64);
-      lastTime = time;
-
-      if (distance > 0 && !pauseRef.current) {
-        position = (position + (delta / 1000) * speed) % distance;
-        track.style.transform = `translate3d(${-position}px, 0, 0)`;
-      }
-
-      animationFrame = window.requestAnimationFrame(tick);
-    };
-
-    const resizeObserver =
-      typeof ResizeObserver === "undefined"
-        ? null
-        : new ResizeObserver(() => {
-            measure();
-          });
-
-    resizeObserver?.observe(firstSet);
-    animationFrame = window.requestAnimationFrame(tick);
-
-    return () => {
-      resizeObserver?.disconnect();
-      window.cancelAnimationFrame(animationFrame);
-      track.style.transform = "translate3d(0, 0, 0)";
-    };
-  }, [section.games]);
 
   return (
     <section id="casino" dir={isArabic ? "rtl" : "ltr"} className="section-shell">
@@ -433,40 +332,19 @@ export default function CasinoSection() {
 
         <FadeUp delay={220}>
           <div className="surface-glass mt-4 overflow-hidden rounded-[26px] px-3 py-4 sm:mt-5 sm:rounded-[30px] sm:px-6 sm:py-5">
-            <div
-              dir="ltr"
-              className="overflow-hidden"
-              style={{
-                maskImage:
-                  "linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%)",
-              }}
-            >
-              <div
-                ref={trackRef}
-                className="flex w-max will-change-transform"
-              >
-                <GameSet
-                  games={section.games}
-                  setIndex={0}
-                  setRef={firstGameSetRef}
-                  activeIndex={hoveredGameIndex}
-                  onGameHover={showGameShowcase}
-                  onGameLeave={scheduleHideGameShowcase}
-                />
-                <GameSet
-                  games={section.games}
-                  setIndex={1}
-                  activeIndex={hoveredGameIndex}
-                  onGameHover={showGameShowcase}
-                  onGameLeave={scheduleHideGameShowcase}
-                />
-                <GameSet
-                  games={section.games}
-                  setIndex={2}
-                  activeIndex={hoveredGameIndex}
-                  onGameHover={showGameShowcase}
-                  onGameLeave={scheduleHideGameShowcase}
-                />
+            <div dir="ltr" className="overflow-x-auto pb-1">
+              <div className="flex min-w-max gap-2.5 pr-2.5 sm:gap-3 sm:pr-3">
+                {section.games.map((game, index) => (
+                  <GameIcon
+                    key={game}
+                    name={game}
+                    index={index}
+                    imageSrc={carouselImages[index] ?? carouselImages[0]}
+                    activeIndex={hoveredGameIndex}
+                    onHover={showGameShowcase}
+                    onLeave={scheduleHideGameShowcase}
+                  />
+                ))}
               </div>
             </div>
           </div>

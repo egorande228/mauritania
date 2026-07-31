@@ -1,29 +1,21 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { marketContactLinks, marketRoutes } from "@/lib/market";
 import { useLanguage } from "@/providers/LanguageProvider";
 
 function FooterBrandMark() {
-  const [logoLoaded, setLogoLoaded] = useState(true);
-
   return (
     <Link href={marketRoutes.home} aria-label="Melbet home" className="footer-brand" dir="ltr">
-      {logoLoaded ? (
-        <Image
-          src="/logo.svg"
-          alt="Melbet"
-          width={172}
-          height={30}
-          unoptimized
-          className="footer-brand__image"
-          onError={() => setLogoLoaded(false)}
-        />
-      ) : (
-        <span className="footer-brand__fallback">Melbet</span>
-      )}
+      <Image
+        src="/logo.svg"
+        alt="Melbet Mauritania logo"
+        width={172}
+        height={30}
+        unoptimized
+        className="footer-brand__image"
+      />
     </Link>
   );
 }

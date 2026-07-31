@@ -23,6 +23,7 @@ const homeStructuredData = [
     "@type": "WebSite",
     "@id": `${marketSiteUrl}/#website`,
     name: "Melbet Mauritania",
+    alternateName: ["Melbet Mauritanie"],
     url: `${marketSiteUrl}/`,
     inLanguage: ["en", "ar", "fr"],
     publisher: {
@@ -35,8 +36,10 @@ const homeStructuredData = [
     "@id": `${marketSiteUrl}/#webpage`,
     url: `${marketSiteUrl}/`,
     name: "Melbet Mauritania | Sports, Casino, Promotions and Gifts",
+    alternateName: "Melbet Mauritanie",
     description:
       "Melbet Mauritania is the multilingual homepage hub for sports markets, casino games, weekly promotions, gifts, and partnership access in Mauritania.",
+    inLanguage: ["en", "ar", "fr"],
     isPartOf: {
       "@id": `${marketSiteUrl}/#website`,
     },

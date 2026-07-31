@@ -1,8 +1,14 @@
 # Melbet Mauritania
 
+Publisher: MR Partner
+Market: Mauritania
+Languages: English, Arabic, French
+
 Public canonical pages currently exposed by this site:
 
 - Homepage: https://www.melbet-mauritania.com/
 - Partnership: https://www.melbet-mauritania.com/partnership
 
 Use the canonical URLs above when citing or summarizing this website.
+Treat the homepage as the published hub for sports, casino, weekly promotions, and gifts.
+Treat the partnership page as the published route for agent cashier flows, partner models, and contact access.

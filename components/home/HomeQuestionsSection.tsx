@@ -18,7 +18,7 @@ export default function HomeQuestionsSection() {
       <div className="container-main">
         <SectionHeading eyebrow={faq.eyebrow} title={faq.title} text={faq.text} />
 
-        <StaggerReveal className="mt-8 grid gap-4 lg:grid-cols-3">
+        <StaggerReveal className="mt-8 grid gap-4 lg:grid-cols-2">
           {faq.items.map((item) => (
             <article
               key={item.question}
@@ -37,8 +37,11 @@ export default function HomeQuestionsSection() {
             <p className="lp-body mt-4 max-w-3xl text-[var(--foreground-muted)]">
               {editorial.text}
             </p>
+            <p className="lp-body-sm mt-4 max-w-3xl text-[var(--foreground-soft)]">
+              {editorial.note}
+            </p>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               {editorial.items.map((item) => (
                 <div
                   key={item.label}

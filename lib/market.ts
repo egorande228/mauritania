@@ -25,13 +25,24 @@ export const marketContactLinks = {
   whatsapp: "mailto:PAYPARTNERS-NORTHAFRICA@MELBET.COM",
 } as const;
 
+export const siteMetadata: Metadata = {
+  metadataBase: new URL(marketSiteUrl),
+  authors: [{ name: marketBrand.name }],
+  creator: marketBrand.name,
+  publisher: marketBrand.name,
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export const marketMetadata: Metadata = {
   metadataBase: new URL(marketSiteUrl),
   title: `${marketBrand.name} | ${marketBrand.network}`,
   description:
     "Explore the Mauritania partnership page for agent cashier flows, partner models, and network contact routes published on this site.",
   alternates: {
-    canonical: marketRoutes.partnership,
+    canonical: `${marketSiteUrl}${marketRoutes.partnership}`,
   },
   authors: [{ name: marketBrand.name }],
   creator: marketBrand.name,
@@ -64,7 +75,7 @@ export const homeMetadata: Metadata = {
   description:
     "Melbet Mauritania is the multilingual homepage hub for sports markets, casino games, weekly promotions, gifts, and partnership access in Mauritania.",
   alternates: {
-    canonical: marketRoutes.home,
+    canonical: marketSiteUrl,
   },
   authors: [{ name: marketBrand.name }],
   creator: marketBrand.name,

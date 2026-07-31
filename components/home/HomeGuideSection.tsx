@@ -33,7 +33,26 @@ export default function HomeGuideSection() {
         <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
           <FadeUp>
             <article className="surface-glass rounded-[28px] p-5 sm:rounded-[30px] sm:p-7">
-              <p className="lp-body text-[var(--foreground-muted)]">{section.answerBlock}</p>
+              <h3 className="lp-card-title text-[var(--foreground)]">{section.answerHeading}</h3>
+              <p className="lp-body mt-4 text-[var(--foreground-muted)]">{section.answerBlock}</p>
+              <p className="lp-body-sm mt-4 text-[var(--foreground-soft)]">
+                {section.supportingText}
+              </p>
+
+              <div className="mt-6 rounded-[22px] border border-[var(--border)] bg-black/16 p-4 sm:p-5">
+                <p className="lp-eyebrow text-[var(--primary)]">{section.signalsLabel}</p>
+                <ul className="mt-3 grid gap-3">
+                  {section.signals.map((signal) => (
+                    <li key={signal} className="flex items-start gap-3">
+                      <span
+                        aria-hidden
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--primary)]"
+                      />
+                      <span className="lp-body-sm text-[var(--foreground-muted)]">{signal}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <div className="mt-6">
                 <p className="lp-eyebrow text-[var(--primary)]">{section.quickLinksLabel}</p>

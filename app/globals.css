@@ -63,6 +63,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--background);
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -138,6 +139,12 @@ svg {
 
 .section-shell--sports {
   padding-top: clamp(2.75rem, 4.5vw, 4rem);
+}
+
+.section-shell:not(.section-shell--hero),
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 960px;
 }
 
 .surface-glass {

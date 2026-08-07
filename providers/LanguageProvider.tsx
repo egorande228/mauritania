@@ -3,7 +3,9 @@ import {
   createContext,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
+  startTransition,
   useState,
   type ReactNode,
 } from "react";
@@ -26,14 +28,10 @@ const LanguageContext = createContext<Ctx | null>(null);
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY) as Language | null;
     if (saved && (LANGS as string[]).includes(saved)) {
-      const timeoutId = window.setTimeout(() => {
-        setLanguageState(saved);
-      }, 0);
-
-      return () => window.clearTimeout(timeoutId);
+      setLanguageState(saved);
     }
   }, []);
 
@@ -46,11 +44,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const value = useMemo<Ctx>(() => ({
     language,
     isArabic: language === "ar",
-    setLanguage: setLanguageState,
+    setLanguage: (nextLanguage) => {
+      startTransition(() => {
+        setLanguageState(nextLanguage);
+      });
+    },
     toggleLanguage: () =>
-      setLanguageState((curr) => {
-        const idx = LANGS.indexOf(curr);
-        return LANGS[(idx + 1) % LANGS.length];
+      startTransition(() => {
+        setLanguageState((curr) => {
+          const idx = LANGS.indexOf(curr);
+          return LANGS[(idx + 1) % LANGS.length];
+        });
       }),
     t: getTranslations(language),
   }), [language]);

@@ -16,6 +16,7 @@ const guideLinks = [
 export default function HomeGuideSection() {
   const { t, isArabic } = useLanguage();
   const section = t.home.guide;
+  const editorial = t.home.editorial;
 
   return (
     <section
@@ -24,6 +25,28 @@ export default function HomeGuideSection() {
       className="section-shell section-shell--tight"
     >
       <div className="container-main">
+        <FadeUp>
+          <article className="surface-panel mb-8 rounded-[28px] p-5 sm:mb-10 sm:rounded-[30px] sm:p-7">
+            <p className="lp-eyebrow text-[var(--primary)]">{editorial.eyebrow}</p>
+            <h2 className="lp-card-title mt-4 text-[var(--foreground)]">{editorial.title}</h2>
+            <p className="lp-body-sm mt-3 max-w-3xl text-[var(--foreground-muted)]">
+              {editorial.text}
+            </p>
+
+            <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              {editorial.items.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-[20px] border border-[var(--border)] bg-black/18 p-4"
+                >
+                  <p className="lp-eyebrow text-[var(--foreground-soft)]">{item.label}</p>
+                  <p className="lp-body-sm mt-2 text-[var(--foreground)]">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        </FadeUp>
+
         <SectionHeading
           eyebrow={section.eyebrow}
           title={section.title}

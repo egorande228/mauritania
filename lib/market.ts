@@ -40,7 +40,7 @@ export const marketMetadata: Metadata = {
   metadataBase: new URL(marketSiteUrl),
   title: `${marketBrand.name} | ${marketBrand.network}`,
   description:
-    "Explore the Mauritania partnership page for agent cashier flows, partner models, and network contact routes published on this site.",
+    "Explore the Mauritania partnership page published by MR Partner for agent cashier flows, partner models, and network contact routes.",
   alternates: {
     canonical: `${marketSiteUrl}${marketRoutes.partnership}`,
   },
@@ -57,7 +57,7 @@ export const marketMetadata: Metadata = {
     siteName: marketBrand.parent,
     title: `${marketBrand.name} | ${marketBrand.network}`,
     description:
-      "Partnership routes for agents and partners in the Mauritania network published on this website.",
+      "Partnership routes published by MR Partner for agents and partners in the Mauritania network.",
     locale: "ar_MR",
     alternateLocale: ["en_US", "fr_MR"],
   },
@@ -65,7 +65,7 @@ export const marketMetadata: Metadata = {
     card: "summary_large_image",
     title: `${marketBrand.name} | ${marketBrand.network}`,
     description:
-      "Partnership routes for agents and partners in the Mauritania network published on this website.",
+      "Partnership routes published by MR Partner for agents and partners in the Mauritania network.",
   },
 };
 
@@ -73,7 +73,7 @@ export const homeMetadata: Metadata = {
   metadataBase: new URL(marketSiteUrl),
   title: "Melbet Mauritania | Sports, Casino, Promotions and Gifts",
   description:
-    "Melbet Mauritania is the multilingual homepage hub for sports markets, casino games, weekly promotions, gifts, and partnership access in Mauritania.",
+    "Melbet Mauritania is the multilingual homepage hub for sports, casino, promotions, gifts, and partnership access in Mauritania for Melbet Mauritanie visitors.",
   alternates: {
     canonical: marketSiteUrl,
   },
@@ -90,7 +90,7 @@ export const homeMetadata: Metadata = {
     siteName: marketBrand.parent,
     title: "Melbet Mauritania | Sports, Casino, Promotions and Gifts",
     description:
-      "Sports, casino games, promotions, gifts, and partnership access for Mauritania in one homepage hub.",
+      "A multilingual Mauritania homepage for sports, casino, promotions, gifts, and partnership access, including Melbet Mauritanie visitors.",
     locale: "ar_MR",
     alternateLocale: ["en_US", "fr_MR"],
   },
@@ -98,6 +98,6 @@ export const homeMetadata: Metadata = {
     card: "summary_large_image",
     title: "Melbet Mauritania | Sports, Casino, Promotions and Gifts",
     description:
-      "Sports, casino games, promotions, gifts, and partnership access for Mauritania in one homepage hub.",
+      "A multilingual Mauritania homepage for sports, casino, promotions, gifts, and partnership access, including Melbet Mauritanie visitors.",
   },
 };
